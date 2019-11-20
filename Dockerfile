@@ -11,7 +11,8 @@ RUN apt-get update &&\
                                                ca-certificates \
                                                lsb-core \
                                                gnupg \
-                                               software-properties-common &&\
+                                               software-properties-common \
+                                               make &&\
 # Install LLVM
     wget -O llvm.sh https://apt.llvm.org/llvm.sh &&\
     chmod +x llvm.sh &&\
@@ -29,3 +30,6 @@ RUN apt-get update &&\
                       software-properties-common &&\
     apt-get -y autoremove &&\
     apt-get -y autoclean
+
+ENV CC=clang-9
+ENV CXX=clang++-9
