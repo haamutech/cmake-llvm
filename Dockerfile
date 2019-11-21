@@ -31,5 +31,5 @@ RUN apt-get update &&\
     apt-get -y autoremove &&\
     apt-get -y autoclean
 
-ENV CC=clang-9
-ENV CXX=clang++-9
+ENV CC=clang-${LLVM_VERSION}
+ENV CXX=clang++-${LLVM_VERSION}
