@@ -10,7 +10,7 @@ Procedure of building the image:
 ```bash
 git clone git@github.com:haamutech/cmake-llvm-docker.git
 cd cmake-llvm-docker
-docker build -t oinuar/cmake-llvm:latest .
+docker build -t haamutech/cmake-llvm:latest .
 ```
 
 
