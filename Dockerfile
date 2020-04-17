@@ -14,9 +14,10 @@ RUN apt-get update &&\
                                                lsb-core \
                                                gnupg \
                                                software-properties-common \
+                                               pkg-config \
                                                make \
-                                               cmake \
-                                               libomp-dev &&\
+                                               cmake &&\
+    (apt-get install --no-install-recommends -y libomp-dev || true) &&\
 # Install LLVM
     wget -O llvm.sh https://apt.llvm.org/llvm.sh &&\
     chmod +x llvm.sh &&\
