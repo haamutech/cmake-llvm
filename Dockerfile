@@ -16,15 +16,15 @@ RUN apt-get update &&\
                                                software-properties-common \
                                                pkg-config \
                                                make \
-                                               python-setuptools \
-                                               python-pip &&\
+                                               python3-setuptools \
+                                               python3-pip &&\
     (apt-get install --no-install-recommends -y libomp-dev || true) &&\
 # Install LLVM
     wget -O llvm.sh https://apt.llvm.org/llvm.sh &&\
     chmod +x llvm.sh &&\
     ./llvm.sh ${LLVM_VERSION} &&\
 # Install CMake
-    pip install --upgrade cmake && \
+    pip3 install --upgrade cmake && \
 # Cleanup
     rm -f llvm.sh &&\
     apt-get remove -y wget \
@@ -32,7 +32,7 @@ RUN apt-get update &&\
                       lsb-core \
                       gnupg \
                       software-properties-common \
-                      python-setuptools \
-                      python-pip &&\
+                      python3-setuptools \
+                      python3-pip &&\
     apt-get -y autoremove &&\
     apt-get -y autoclean
