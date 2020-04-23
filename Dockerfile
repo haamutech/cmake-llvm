@@ -16,6 +16,7 @@ RUN apt-get update &&\
                                                software-properties-common \
                                                pkg-config \
                                                make \
+                                               python-setuptools \
                                                python-pip &&\
     (apt-get install --no-install-recommends -y libomp-dev || true) &&\
 # Install LLVM
@@ -31,6 +32,7 @@ RUN apt-get update &&\
                       lsb-core \
                       gnupg \
                       software-properties-common \
+                      python-setuptools \
                       python-pip &&\
     apt-get -y autoremove &&\
     apt-get -y autoclean
