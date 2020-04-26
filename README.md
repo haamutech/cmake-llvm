@@ -2,7 +2,7 @@
 
 ![CI](https://github.com/haamutech/cmake-llvm/workflows/CI/badge.svg)
 
-This repository contains a builder for Docker image which contains CMake and LLVM. You are free to set any CMake and LLVM version via build arguments; `CMAKE_VERSION` and `LLVM_VERSION` respectively. Default LLVM version is 9. There is also a built-in OpenMP support that can be enabled in `CMakeLists.txt`:
+This repository contains a builder for Docker image which contains CMake and LLVM. You are free to set any CMake and LLVM version via build arguments; `CMAKE_VERSION` and `LLVM_VERSION` respectively. Default CMake version is 3.17.1 and default LLVM version is 9. There is also a built-in OpenMP support that can be enabled in `CMakeLists.txt`:
 
 ```
 find_package(OpenMP)
